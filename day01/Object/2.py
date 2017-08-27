@@ -1,14 +1,13 @@
-class Student(object):
-	__slots__=('name','age')
-	pass
-s=Student()
-s.name = 'hu'
-def set_age(self,age):
-	self.age = age
-Student.set_age =set_age
-s.set_age(25)
-print(s.age)
-class stu(Student):
-	__slots__ = ('hu')
-st =stu()
-st.hu ='hu'
+x = 25
+epsilon = 0.01
+step = epsilon**2
+numGuesses = 0
+ans = 0.0
+while (abs(ans**2-x)) >= epsilon and ans<+x:
+	ans += step
+	numGuesses += 1
+print('numGuesses =' + str(numGuesses))
+if(abs(ans**2-x)>=epsilon):
+	print('faild')
+else:
+	print(str(ans)+'is closed to'+str(x))
